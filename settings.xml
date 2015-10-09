@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+  <profiles>
+    <profile>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>pentaho.resolve.repo</id>
+          <name>Pentaho Group Resolve Repository</name>
+          <url>http://nexus.pentaho.org/content/groups/omni/</url>
+          <releases>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>fail</checksumPolicy>
+          </releases>
+          <snapshots>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>fail</checksumPolicy>
+          </snapshots>
+        </repository>
+        <repository>
+          <id>old.pentaho.resolve.repo</id>
+          <name>Old (Artifactory) Pentaho Group Resolve Repository</name>
+          <url>http://repo.pentaho.org/artifactory/repo/</url>
+          <releases>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>fail</checksumPolicy>
+          </releases>
+          <snapshots>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>fail</checksumPolicy>
+          </snapshots>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+  <mirrors>
+    <mirror>
+      <id>pnexus</id>
+      <name>Pnexus</name>
+      <url>http://nexus.pentaho.org/content/groups/omni/</url>
+      <mirrorOf>central</mirrorOf>
+    </mirror>
+  </mirrors>
+</settings>
